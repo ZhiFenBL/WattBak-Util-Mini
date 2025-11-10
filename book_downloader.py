@@ -73,7 +73,7 @@ def main():
         print("Usage: uv run book_downloader.py <username>")
         sys.exit(1)
 
-    username = sys.argv[1]
+    username = sys.argv[1].strip().lower()
     base_dir = os.path.join("book_data", username)
     os.makedirs(base_dir, exist_ok=True)
     json_path = os.path.join(base_dir, "stories.json")

@@ -31,7 +31,7 @@ def main():
         sys.exit(1)
 
     users_file = sys.argv[1]
-    users = read_usernames(users_file)
+    users = [u.strip().lower() for u in read_usernames(users_file)]
     total = len(users)
 
     print(f"📋 {total} unique users to process.\n")
